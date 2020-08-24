@@ -1,0 +1,9 @@
+BDD Implementation (?) in [[https://freepascal.org/][free pascal]].
+
+This one doesn't appear to be very fleshed out. It certainly doesn't implement a full BDD Base.
+
+It requires [[https://github.com/tangentstorm/xpl/blob/master/code/xpc.inc][xpc.inc]]
+and [[https://github.com/tangentstorm/xpl/blob/master/code/xpc.pas][xpc.pas]]. These
+are standalone files from a large body of pascal libraries I've written over the years:
+
+https://github.com/tangentstorm/xpl
