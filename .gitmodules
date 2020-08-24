@@ -1,6 +1,6 @@
 [submodule "rust/bex"]
-	path = rust/bex
+	path = rust-bex
 	url = https://github.com/tangentstorm/bex
 [submodule "elixir/exbdd"]
-	path = elixir/exbdd
+	path = elixir-exbdd
 	url = https://github.com/tangentstorm/exbdd
