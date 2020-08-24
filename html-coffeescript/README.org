@@ -1,0 +1,18 @@
+This isn't a BDD base, but a simple interactive
+visualization of a BDD generated from a truth
+table, using [[https://coffeescript.org/][coffeescript]],
+[[https://d3js.org/][d3.js]], and a layout constraint package
+called [[https://ialab.it.monash.edu/webcola/][webcola]]
+
+As of this writing, there seems to be a bug that
+prevents it from rendering correctly in firefox
+-- try chrome instead.
+
+Also, I didn't really invest enough time to get cola
+to render nicely, so the generated BDD diagrams are
+pretty weird-looking.
+
+You can run this code on jfiddle.net, if you prefer:
+
+https://jsfiddle.net/tangentstorm/bLbayo6c/
+
