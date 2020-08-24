@@ -1,0 +1,13 @@
+This is a simple Binary Decision Diagram module written in pure python.
+
+Feel free to use it under the terms of the MIT/X11 license.
+
+However, it's probably most useful for comparison to the other versions in this repo.
+
+The one thing that might be especially useful is the file [[pyBDD/gen_norms.py][gen_norms.py]],
+which generates a normalized form for every if-then-else expression of 3 input variables.
+I've used the output of this script for testing the =ite= function common to pretty much all my BDD implementations.
+
+For an industrial strength python BDD package (which also includes bindings to various C/C++ implementations), consider:
+
+  https://github.com/tulip-control/dd
