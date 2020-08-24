@@ -11,7 +11,7 @@ a boolean function -- usually from a large number of input bits to a
 single output bit.
 
 A maximally expanded BDD is the same as a binary decision tree with
-2^{i-1} branching nodes for each _i_ \in 1.._N_, where _N_ is the number
+2^{i-1} branching nodes for each _i_ \in 1..N, where N is the number
 of input variables, and 2^N leaf nodes, each \in {0, 1}.
 
 The leaves represent boolean constants, and all other nodes represent
