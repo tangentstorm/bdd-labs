@@ -1,0 +1,52 @@
+
+* BDD Labs
+
+Binary Decision Diagrams implemented in various languages.
+
+
+* (Reduced, Ordered) Binary Decision Diagrams
+
+A binary decision diagram is a kind of data structure that represents
+a boolean function -- usually from a large number of input bits to a
+single output bit.
+
+A maximally expanded BDD is the same as a binary decision tree with
+$2^{i-1}$ branching nodes for each $i \in 1..N$, where $N$ is the number
+of input variables, and $2^N$ leaf nodes, each $\in {0, 1}$.
+
+The leaves represent boolean constants, and all other nodes represent
+an "if-then-else" construct, branching on a particular variable. For
+example ~x0 ? 0 : 1~ (using a c-like notation) represents the expression
+~if x0 then 0 else 1~; or more simply, =¬x0=.
+
+Generally, "BDD" refers to a _reduced_ and _ordered_ BDD.
+
+In a reduced BDD, whenever two subgraphs have the exact same structure,
+you represent them with a single node. For example, ~x0 ? 0 : 0~ is =0=
+no matter what value =x0= gets, so the function can be replaced by ~0~
+anywhere it appears. Further, any ~a ? b : b~ gets replaced by =b=.
+
+For a BDD to be ordered, the variable identification numbers must always
+be sorted from top to bottom, so that the children of any node that branches
+on variable xN can be only leaf nodes, or branch on variable xM where M < N.
+(The variable ordering scheme is arbitrary, provided the same ordering is used
+consistently for all nodes.)
+
+* BDD Base implementations
+
+A _BDD Base_ is a collection ("database") of BDD nodes.
+
+I find they make a for a nice project when learning a new programming language,
+and have implemented them in various languages over the years.
+
+There are many high-quality BDD implementations better than the ones in this repot.
+
+- [[https://www.davidkebo.com/cudd][CUDD]] seems to be the "industry standard"
+  (although the website seems to have been abandoned), and supports a wide
+  variety of BDD operations and variants.
+- [[https://github.com/trolando/sylvan][sylvan]] is a multi-core implementation in C.
+
+My own best effort is [[https://github.com/tangentstorm/bex][bex]] also a multi-core
+implementation, using rust. As of this writing, it supports BDDs and a novel related
+structure where the nodes represent boolean polynomials in
+[[https://en.wikipedia.org/wiki/Algebraic_normal_form][algebraic normal form]].
